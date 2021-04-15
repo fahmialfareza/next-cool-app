@@ -3,18 +3,17 @@ import Link from "next/link";
 import Header from "../components/Header";
 import styles from "../styles/Index.module.css";
 
-export default function Home() {
+export default function Todo() {
   return (
     <div className="container">
       <Head>
-        <title>My Cool App</title>
+        <title>My Todos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className="title">Welcome to My App</h1>
+        <h1 className="title">Cool stuff todo Today</h1>
         <Header />
-        <img src="/static/images/firebase.png" alt="" />
       </main>
     </div>
   );
