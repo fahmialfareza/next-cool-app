@@ -3,22 +3,20 @@ import Link from "next/link";
 import { useState } from "react";
 import { connect } from "react-redux";
 import { setInfo } from "../redux/actions/main";
-import Header from "../components/Header";
-import styles from "../styles/Index.module.css";
+import "../styles/Index.module.less";
 
 const Weather = ({ userInfo, setInfo }) => {
   const [name, setName] = useState("");
 
   return (
-    <div className="container">
+    <>
       <Head>
         <title>The Weather</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className="main">
         <h1 className="title">Today is Looking Good for {userInfo.name}</h1>
-        <Header />
         <input
           type="text"
           value={name}
@@ -27,7 +25,7 @@ const Weather = ({ userInfo, setInfo }) => {
         />
         <button onClick={() => setInfo(name)}>Submit</button>
       </main>
-    </div>
+    </>
   );
 };
 
